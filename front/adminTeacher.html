@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/aos.css">
+    <link rel="stylesheet" href="../assets/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+
+    <title>Login Page</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">USPF CCS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="adminTeacher.html" class="nav-link active" aria-current="page">Teachers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Students</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Subjects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Attendance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR -->
+
+    <!-- MAIN CONTENT -->
+    <div class="container-lg">
+        <div class="row mt-5">
+            <div class="col-12 border rounded-2 border-1 px-0">
+                <p class="border-bottom p-3 fs-5 bg-body-secondary">
+                    List of teachers registered this school year
+                </p>
+                <div class="row justify-content-between px-3 mb-3">
+                    <p class="p-0 w-50 ps-3 m-0">Show <select class="form-select mx-2 d-inline" style="width: 5rem;"
+                            aria-label="Default select example">
+                            <option selected>10</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="1">4</option>
+                            <option value="2">5</option>
+                            <option value="3">6</option>
+                            <option value="1">7</option>
+                            <option value="2">8</option>
+                            <option value="3">9</option>
+                            <option value="1">10</option>
+                            <option value="2">11</option>
+                            <option value="3">12</option>
+                            <option value="1">13</option>
+                            <option value="2">14</option>
+                            <option value="3">15</option>
+                        </select> Entries
+                    </p>
+                    <form class="d-flex w-25" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="table-responsive px-3">
+                    <table class="table border text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">Image</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email Address</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">img</td>
+                                <td scope="row">Jlad Lanete</td>
+                                <td scope="row">jladaudrey@gmail.com</td>
+                                <td scope="row">
+                                    <button type="button" class="btn p-0" data-bs-toggle="modal"
+                                        data-bs-target="#viewTeacher">
+                                        <i class="fa fa-eye text-info">
+                                        </i>
+                                    </button>
+                                    <button type="button" class="btn p-0" data-bs-toggle="modal"
+                                        data-bs-target="#editTeacher"><i class="fa fa-edit text-primary"></i></button>
+                                    <button type="button" class="btn p-0" data-bs-toggle="modal"
+                                        data-bs-target="#deleteTeacher">
+                                        <i class="fa fa-trash text-danger"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- MODAL FOR VIEWING THE TEACHER -->
+            <div class="modal" tabindex="-1" id="viewTeacher">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Teacher Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <img src="#" alt="Profile Image">
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Name</strong></td>
+                                                    <td>Jlad Lanete</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Address</strong></td>
+                                                    <td>Cebu City</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Email Address</strong></td>
+                                                    <td>jladaudrey@gmail.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Qualification</strong></td>
+                                                    <td>M. CS</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Joined Date</strong></td>
+                                                    <td>09/21/2011</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Subjects Handled</strong></td>
+                                                    <td>Math,Science,Programming</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MODAL FOR VIEWING THE TEACHER -->
+            <!-- MODAL FOR EDITING THE TEACHER -->
+            <div class="modal" tabindex="-1" id="editTeacher">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Edit Teacher</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form action="#" method>
+                                        <div class="mb-3">
+                                            <label for="name" class="form-label">Teacher Name: <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" required>
+                                            <label for="Address" class="form-label">Address: <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" required>
+                                            <label for="email" class="form-label">Email Address: <span class="text-danger">*</span></label>
+                                            <input type="email" class="form-control" required>
+                                            <label for="password" class="form-label">Password: <span class="text-danger">*</span></label>
+                                            <input type="password" class="form-control" required>
+                                            <label for="qualification" class="form-label">Qualification: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" required>
+                                            <label for="subjects" class="form-label">Subjects: <span class="text-danger">*</span></label>
+                                            <div class="form-group">
+                                                <label for="first-select">First Select</label>
+                                                <select id="first-select" class="form-control">
+                                                  <option value="">--Select--</option>
+                                                  <option value="1">Option 1</option>
+                                                  <option value="2">Option 2</option>
+                                                  <option value="3">Option 3</option>
+                                                </select>
+                                              </div>
+                                              
+                                              <div class="form-group" style="display:none;">
+                                                <label for="second-select">Second Select</label>
+                                                <select id="second-select" class="form-control">
+                                                  <option value="">--Select--</option>
+                                                </select>
+                                              </div>
+                                              
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MODAL FOR VIEWING THE TEACHER -->
+            <!-- MODAL FOR DELETING THE TEACHER -->
+            <!-- MODAL FOR DELETING THE TEACHER -->
+
+        </div>
+    </div>
+    <!-- MAIN CONTENT -->
+
+
+
+
+
+
+
+
+
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+  $('#first-select').on('change', function() {
+    var selectedOption = $(this).val();
+    if(selectedOption != '') {
+      $('#second-select').empty();
+      $('#second-select').append('<option value="">--Select--</option>');
+      if(selectedOption == '1') {
+        $('#second-select').append('<option value="1">Option 1.1</option>');
+        $('#second-select').append('<option value="2">Option 1.2</option>');
+      } else if(selectedOption == '2') {
+        $('#second-select').append('<option value="3">Option 2.1</option>');
+        $('#second-select').append('<option value="4">Option 2.2</option>');
+      } else if(selectedOption == '3') {
+        $('#second-select').append('<option value="5">Option 3.1</option>');
+        $('#second-select').append('<option value="6">Option 3.2</option>');
+      }
+      $('#second-select').parent().show();
+    } else {
+      $('#second-select').parent().hide();
+    }
+  });
+});
+
+    </script>
+    <script src="../assets/js/bootstrap.bundle.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
