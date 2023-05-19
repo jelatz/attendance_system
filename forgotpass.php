@@ -17,24 +17,19 @@
             <div class="col-lg-5 text-center login-form p-4 rounded-3">
                 <form action="#" method="POST">
                     <div class="mb-3">
-                        <h3><strong>Login</strong></h3>
+                        <h3><strong>Password Reset</strong></h3>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="username" class="form-control h-25" id="floatingInput" placeholder="Username">
-                        <label for="floatingInput">Username</label>
+                        <input type="username" class="form-control h-25" id="floatingInput" placeholder="username">
+                        <label for="floatingInput">Enter your Username</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control h-25" id="floatingPass" placeholder="Password">
-                        <label for="floatingPass">Password</label>
+                        <input type="password" class="form-control h-25" id="floatingPass" placeholder="email">
+                        <label for="floatingPass">Enter your Email Address</label>
                     </div>
-                    <div class="mb-1 text-start d-flex align-items-center">
-                        <input type="checkbox" class="checkbox" name="remember"><span class="ms-2">Remember Password</span>
-                    </div>
-                    <div class="mb-3">
-                        <a href="forgotpass.php" class="nav-link text-start ms-1 forgotPass"><small>Forgot Password?</small></a>
-                    </div>
-                    <div class="mt-4">
-                        <input type="submit" name="login" value="Login" class="btn login-btn text-white rounded-3">
+                    <div class="mt-4 d-flex">
+                        <input type="submit" name="login" value="Login" class="btn login-btn mx-2 text-white rounded-3">
+                        <a href="index.php" class="btn login-btn mx-2 text-white rounded-3">Back to Login</a>
                     </div>
                 </form>
             </div>
