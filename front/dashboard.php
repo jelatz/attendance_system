@@ -24,7 +24,7 @@
             <ul class="dropdown-menu dropdown-menu-dark">
                 <h5 class="p-2">Admin</h5>
                 <li class="dropdown-item m-0 p-2 my-1">
-                    <button type="button" class="btn m-0 p-0" onclick="darkmode">Darkmode</button>
+                    <button type="button" class="btn m-0 p-0" onclick="toggleTheme()">Darkmode</button>
                 </li>
                 <li class="dropdown-item m-0 p-2 my-1">
                     <a href="settings.php" class="nav-link">Settings</a>
@@ -38,7 +38,7 @@
     <!-- END TOP NAVBAR -->
     <!-- START NAVBAR -->
     <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid mx-0 px-0">
+        <div class="container-fluid">
             <a href="dashboard.php" class="brand">LOGO</a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navContent">
                 <span class="navbar-toggler-icon"></span>
@@ -92,7 +92,7 @@
     <div id="content-wrapper">
         <section>
             <div class="container">
-                <div class="row justify-content-evenly mt-5 gap-3">
+                <div class="row justify-content-around mt-5 gap-3">
                     <h1><strong class="text-dark">Dashboard</strong></h1>
                     <div class="col-lg-3 dash">
                         <p class="text-dark">Accounts</p>
@@ -120,9 +120,9 @@
                         </form>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mt-3">
                     <div class="table-responsive">
-                        <table class="table table-borderless">
+                        <table class="table table-bordered">
                             <thead>
                                 <tr class="text-center">
                                     <th scope="col">Event Name</th>

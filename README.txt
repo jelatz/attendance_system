@@ -48,3 +48,5 @@ ENTITIES
 -eventdate
 -eventtime
 -eventvenue
+-departmetFuilding
+-departmentFloor

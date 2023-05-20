@@ -7,3 +7,8 @@ function login (){
     document.getElementById('login').style.display='flex';
   document.getElementById('forgot').style.display='none';
 }
+
+function toggleTheme() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
