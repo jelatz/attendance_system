@@ -8,7 +8,15 @@ function login (){
   document.getElementById('forgot').style.display='none';
 }
 
-function toggleTheme() {
+function themeChange() {
   var element = document.body;
   element.classList.toggle("dark-mode");
+}
+
+var account = document.getElementById("account");
+var children = account.children;
+for (var i = 0; i < children.length; i++) {
+  if (children[i].classList.contains("active")) {
+    account.classList.add('show');
+  }
 }

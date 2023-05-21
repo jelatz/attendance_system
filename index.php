@@ -30,8 +30,8 @@
                     <div class="mb-1 text-start d-flex align-items-center">
                         <input type="checkbox" class="checkbox" name="remember"><span class="ms-2">Remember Password</span>
                     </div>
-                    <div class="mb-3">
-                        <a href="forgotpass.php" class="nav-link text-start ms-1 forgotPass"><small>Forgot Password?</small></a>
+                    <div class="mb-3 text-start">
+                        <a href="forgotpass.php" class="text-decoration-none text-dark text-start ms-1 forgotPass"><small>Forgot Password?</small></a>
                     </div>
                     <div class="mt-4">
                         <input type="submit" name="login" value="Login" class="btn login-btn text-white rounded-3">

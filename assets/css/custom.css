@@ -3,12 +3,6 @@
 *{
     box-sizing: border-box !important;
     font-family: 'Source Sans Pro', sans-serif;
-    color: white !important;
-}
-:root{
-    --background-color: #D6D6D6;
-    --color1:#202020;
-    --color2: #333533;
 }
 html,body{
     scroll-behavior: smooth !important;
@@ -23,92 +17,103 @@ html::-webkit-scrollbar{
     display:none;
     }
 .login-form{
-    background-color: var(--background-color);
+    background-color: #D6D6D6;
 }
 .login-btn{
-    background-color: var(--color1);
+    background-color: #202020;
     width: 12rem;
 }
 .forgotPass:hover{
     color: red !important;
 }
+.nav-link{
+    width: 100% !important;
+    color: #5c5c5c;
+    padding: 3px 10px 3px 10px;
+}
+.nav-link:hover{
+    background-color: #FFD700 !important;
+}
+.welcome-message{
+    display: none;
+}
+.dropdown-menu{
+    border: none;
+        background-color: #C4C4C4;
+}
+.dropdown-item:hover{
+    background-color: #FFD700 !important;
+}
 .navbar{
-    background-color: var(--color2) !important;
+        background-color: #C4C4C4;
 }
-.top-nav{
-    display: none;
+#content-wrapper{
+    padding-top: 4rem;
+    height: 100%;
+    min-height: 100vh;
 }
-.brand{
-    text-decoration: none;
+.input-group{
+    position: relative;
+    width: 15rem;
 }
-.welcome{
-    display: none;
+.form-control{
+    border-radius: 15px !important;
+    border: 1px solid black;
 }
-section{
-    margin-top: 4rem;
-    width: 100%;
-    color: black !important;
+.input-group-append{
+    position: absolute;
+    left: 12rem;
 }
 .active{
-    color: var(--color2) !important;
-    background-color: var(--background-color) !important;
-}
-
-.dash{
-    background-color: var(--background-color) !important;
-    border-radius: 15px;
-    padding: 10px 10px
-}
-th{
+    background-color: #FFD700 !important;
+    font-weight: 1000;
     color: black !important;
 }
-
+.modal-content{
+    background-color: #C4C4C4;
+}
 @media screen and (min-width:992px) {
-   .top-nav{
-    background-color: var(--color1);
-    display: flex;
-    justify-content: space-between;
-    height: 4rem;
-    align-items: center;
-   }
-   .brand{
-    display: none;
-   }
-   .navbar{
-    margin-top: 3.9rem;
-    width: 200px;
-    /* height: 100%; */
-    min-height: 100vh;
-    background-color: var(--color1) !important;
-    justify-content: start;
-    align-items: start;
-
-   }
-   .navbar-nav{
-    flex-direction: column !important;
-    justify-content: center !important;
-    text-align: center !important;
-    width: 100%;
-   }
-   .darkmode,.settings,.logout{
-    display: none !important;
-   }
-   .account-dropdown{
-   position: static !important;
-   padding-left: 3rem !important;
-   }
-   .account:hover{
-    background-color: var(--color2) !important;
-   }
-   .welcome{
-    display: block;
-   }
-   #content-wrapper{
-    padding-left: 200px;
-   }
-   section{
-    margin-top: 0;
-    width: 100%;
-    height: 100%;
-   }
+    #content-wrapper{
+        padding-left: 200px;
+        padding-top: 2rem;
+    }
+    .welcome-message{
+        display: block;
+    }
+    .navbar{
+        width: 200px;
+        background-color: #C4C4C4;
+        height: 100%;
+        min-height: 100vh;
+        justify-content: flex-start !important;
+        align-items: start !important;
+    }
+    .welcome-message{
+        margin: 1rem 0 1rem 0 !important;
+    }
+    .nav-link:hover{
+        width: 100% !important;
+    }
+    .navbar-nav{
+        width: 100%;
+        display: flex;
+        flex-direction: column !important;
+        text-align: center !important;
+        text-align: center !important;
+        height: 100% !important;
+        min-height: 100vh;
+        gap: .5rem;
+    }
+    #navbarContent{
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .dropdown-menu{
+        width: 100%;
+        text-align: center;
+        position: static !important;
+        background-color: #ededed;
+        gap: 1rem;
+        padding: 0 0 0 0;
+    }
 }
