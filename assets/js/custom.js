@@ -46,8 +46,6 @@ function themeChange() {
   }
 }
 
-
-
 var account = document.getElementById("account");
 var children = account.children;
 for (var i = 0; i < children.length; i++) {

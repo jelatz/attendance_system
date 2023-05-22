@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../assets/css/aos.css">
     <link rel="stylesheet" href="../assets/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Department Page</title>
+    <title>Events Page</title>
 </head>
 
 <body>
@@ -40,14 +40,13 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="event.html" class="nav-link">Events</a>
+                        <a href="event.html" class="nav-link active">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a href="dept.html" class="nav-link active">Departments</a>
+                        <a href="dept.html" class="nav-link">Departments</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link" type="button" name="themeChange" onclick="themeChange()">Dark Mode
-                        </a>
+                        <a href="#" class="nav-link" type="button" name="themeChange" onclick="themeChange()">Dark Mode </a>
                     </li>
                     <li class="nav-item">
                         <a href="reports.html" class="nav-link">Reports</a>
@@ -63,7 +62,9 @@
     <!-- START CONTENT -->
     <div id="content-wrapper">
         <div class="container-fluid">
-            <h1 style="color:#ddb900;"><strong>Departments</strong></h1>
+            <div class="row d-flex align-items-center" id="header">
+            <h1 class="px-3 my-0" style="color:#FFD700;"><strong>Events</strong></h1>
+            </div>
             <!-- <p class="fw-bold fw-5 mt-lg-4">Student</p> -->
             <!-- SEARCH AND ADD ADMIN BUTTON -->
             <div class="mt-5 row justify-content-between">
@@ -72,14 +73,14 @@
                         <input type="text" class="form-control" placeholder="Search...">
                         <div class="input-group-append">
                             <button class="btn" type="submit" name="search">
-                                <i class="fas fa-search z-index-master"></i>
+                                <i class="fas fa-search"></i>
                             </button>
                         </div>
                     </form>
                 </div>
                 <div class="col-auto text-end">
                     <button class="btn" style="background-color: #D9D9D9;" type="button" data-bs-toggle="modal"
-                        data-bs-target="#addOfficer">Add Department</button>
+                        data-bs-target="#addOfficer">Add Event</button>
                 </div>
             </div>
             <!-- SEARCH AND ADD ADMIN BUTTON -->
@@ -88,21 +89,25 @@
                 <div class="modal-dialog modal-dialog-centered" id="admin">
                     <div class="modal-content p-4">
                         <div class="modal-header border-0">
-                            <h1 class="modal-title fs-5">Add New Department</h1>
+                            <h1 class="modal-title fs-5">Add New Event</h1>
                             <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
                             <form action="#" method="POST">
-                                <label for="dept" class="form-label">Department Name:</label>
+                                <label for="ename" class="form-label">Event Name:</label>
                                 <input type="text" class="form-control" required>
-                                <label for="deptBldng" class="form-label mt-2">Department Building: </label>
+                                <label for="date" class="form-label mt-2">Date: </label>
+                                <input type="date" class="form-control" required>
+                                <label for="time" class="form-label mt-2">Time:</label>
+                                <input type="time" class="form-control" required>
+                                <label for="venue" class="form-label">Venue:</label>
                                 <input type="text" class="form-control" required>
-                                <label for="deptFloor" class="form-label mt-2">Department Floor:</label>
+                                <label for="department" class="form-label mt-2">Department:</label>
                                 <input type="text" class="form-control" required>
                                 <div class="row justify-content-center">
                                     <div class="col-lg-4 text-center">
-                                        <button class="btn btn-small mt-3 w-100 text-white" type="submit"
-                                            style="background-color: #333333;">Create</button>
+                                    <button class="btn btn-small mt-3 w-100 text-white" type="submit"
+                                        style="background-color: #333333;">Create</button>
                                     </div>
                                 </div>
                             </form>
@@ -118,10 +123,11 @@
                         <table class="table table-borderless">
                             <thead>
                                 <tr>
+                                    <th scope="col">Event Name</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">Venue</th>
                                     <th scope="col">Department</th>
-                                    <th scope="col">Building</th>
-                                    <th scope="col">Floor</th>
-                                    <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -129,38 +135,14 @@
                                     <td>sample</td>
                                     <td>sample</td>
                                     <td>sample</td>
-                                    <td class="d-flex gap-2 justify-content-center">
-                                        <button class="btn m-0 p-0" data-bs-toggle="modal" data-bs-target="#deptView">
-                                            <i class="fa fa-pen-to-square text-primary"></i>
-                                        </button>
-                                        <button class="btn m-0 p-0" data-bs-toggle="modal" data-bs-target="#deptDelete">
-                                            <i class="fa fa-trash text-danger"></i>
-                                        </button>
-                                    </td>
+                                    <td>sample</td>
+                                    <td>sample</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-            <!-- MODAL FOR EDIT DEPARTMENT DETAILS -->
-            <div class="modal fade" id="deptView">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header border-0">
-                            <h1 class="modal-title fs-5">Department Name</h1>
-                            <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="#" method="POST">
-                                <label for="deptname" class="form-label">Department Name: </label>
-                                <input type="text" class="form-control" placeholder="Department Name">
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- MODAL FOR EDIT DEPARTMENT DETAILS -->
             <!-- TABLE -->
         </div>
     </div>

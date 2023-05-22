@@ -116,4 +116,11 @@ html::-webkit-scrollbar{
         gap: 1rem;
         padding: 0 0 0 0;
     }
+    #content-wrapper{
+        padding-top: 0 !important;
+    }
+    #header{
+        background-color: rgb(4,4,101);
+        height: 6rem;
+    }
 }
