@@ -46,10 +46,6 @@
                         <a href="dept.html" class="nav-link">Departments</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link" type="button" name="themeChange" onclick="themeChange()">Dark Mode
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a href="reports.html" class="nav-link active">Reports</a>
                     </li>
                     <li class="nav-item">
@@ -64,65 +60,65 @@
     <div id="content-wrapper">
         <div class="container-fluid">
             <div class="row d-flex align-items-center" id="header">
-            <h1 style="color:#FDD700;" class="px-3 my-0"><strong>Reports</strong></h1>
+                <h1 style="color:#FDD700;" class="px-3 my-4"><strong>Reports</strong></h1>
             </div>
-            <!-- <p class="fw-bold fw-5 mt-lg-4">Student</p> -->
+            <p class="fw-bold fw-5 mt-lg-3 px-lg-3">List of Reports</p>
             <!-- SEARCH AND ADD ADMIN BUTTON -->
-            <div class="mt-5 row justify-content-between">
+            <div class="row justify-content-between px-lg-3">
                 <div class="col-auto">
-                    <form class="input-group">
+                    <form class="input-group" method="POST" action="#">
                         <input type="text" class="form-control" placeholder="Search...">
                         <div class="input-group-append">
                             <button class="btn" type="submit" name="search">
                                 <i class="fas fa-search z-index-master"></i>
                             </button>
                         </div>
-                    </form>
                 </div>
                 <div class="col-auto text-end">
-                    <button class="btn" style="background-color: #D9D9D9;" type="button" data-bs-toggle="modal"
-                        data-bs-target="#addOfficer">
+                    <button class="btn btn-sm text-white" name="download" style="background-color: #27235e;"
+                        type="button" data-bs-toggle="modal" data-bs-target="#addOfficer">
                         Download Report
                     </button>
                 </div>
+                </form>
             </div>
             <!-- TABLE FOR REPORTS -->
             <div class="row justify-content-between mt-4">
                 <div class="col">
                     <form action="#" method="POST">
-                    <div class="table-responsive">
-                        <table class="table table-borderless text-center">
-                            <thead>
-                                <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col">Event Name</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Time</th>
-                                    <th scope="col">Venue</th>
-                                    <th scope="col">Total Attendance</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td scope="col">
-                                        <input type="checkbox">
-                                    </td>
-                                    <td scope="col">
-                                        <a href="#" class="">sample</a>
-                                    </td>
-                                    <td scope="col">sample</td>
-                                    <td scope="col">sample</td>
-                                    <td scope="col">sample</td>
-                                    <td scope="col">sample</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </form>
+                        <div class="table-responsive">
+                            <table class="table table-borderless text-center">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">Event Name</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Time</th>
+                                        <th scope="col">Venue</th>
+                                        <th scope="col">Total Attendance</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td scope="col">
+                                            <input type="checkbox">
+                                        </td>
+                                        <td scope="col">
+                                            <a href="#" class="">sample</a>
+                                        </td>
+                                        <td scope="col">sample</td>
+                                        <td scope="col">sample</td>
+                                        <td scope="col">sample</td>
+                                        <td scope="col">sample</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
                 </div>
             </div>
             <!-- TABLE FOR REPORTS -->
-            
+
         </div>
     </div>
 
