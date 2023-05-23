@@ -17,7 +17,7 @@
     <!-- START NAVBAR -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid flex-lg-column px-lg-0">
-            <a href="dashboard.html" class="navbar-brand mb-lg-5 mt-lg-5">Logo</a>
+            <a href="dashboard.html" class="navbar-brand mb-lg-5 mt-lg-5 text-white">Logo</a>
             <div class="welcome-message">
                 <h3>Welcome</h3>
                 <p class="text-center">Admin</p>
@@ -46,9 +46,6 @@
                         <a href="dept.html" class="nav-link">Departments</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link" type="button" onclick="themeChange()">Dark Mode </a>
-                    </li>
-                    <li class="nav-item">
                         <a href="reports.html" class="nav-link">Reports</a>
                     </li>
                     <li class="nav-item">
@@ -63,28 +60,68 @@
     <div id="content-wrapper">
         <div class="container-fluid">
             <div class="row d-flex align-items-center" id="header">
-            <h1 class="px-3 my-0" style="color:#FFD700;"><strong>Dashboard</strong></h1>
-        </div>
-            <p class="fw-bold fw-5 mt-lg-4">Ongoing Event</p>
-            <form class="input-group">
-                <input type="text" class="form-control" placeholder="Search...">
-                <div class="input-group-append">
-                    <button class="btn" type="submit" name="search">
-                        <i class="fas fa-search"></i>
-                    </button>
+                <h1 class="px-3 my-0" style="color:#fec223;"><strong>Dashboard</strong></h1>
+            </div>
+            <div class="row px-lg-4">
+                <p class="fw-bold fw-5 mt-lg-4">Ongoing Event</p>
+                <form class="input-group">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <div class="input-group-append">
+                        <button class="btn" type="submit" name="search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="row mt-lg-3">
+                    <div class="col">
+                        <div class="table-responsive">
+                            <table class="table text-center table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Event Name</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Time</th>
+                                        <th scope="col">Venue</th>
+                                        <th scope="col">Departmet</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td scope="col">sample</td>
+                                        <td scope="col">sample</td>
+                                        <td scope="col">sample</td>
+                                        <td scope="col">sample</td>
+                                        <td scope="col">sample</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-            </form>
-            <div class="row mt-lg-3">
-                <div class="col">
+                <!-- START UPCOMMING EVENT -->
+                <div class="row">
+                    <div class="col-auto">
+                        <p class="fw-bold fw-5 mt-lg-4">Upcomming Event</p>
+                        <form class="input-group">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <div class="input-group-append">
+                                <button class="btn" type="submit" name="search">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="table-responsive">
-                        <table class="table text-center table-borderless">
+                        <table class="table table-borderless text-center">
                             <thead>
                                 <tr>
                                     <th scope="col">Event Name</th>
                                     <th scope="col">Date</th>
                                     <th scope="col">Time</th>
                                     <th scope="col">Venue</th>
-                                    <th scope="col">Departmet</th>
+                                    <th scope="col">Department</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -99,11 +136,11 @@
                         </table>
                     </div>
                 </div>
-            </div>
-            <!-- START UPCOMMING EVENT -->
+            <!-- END UPCOMMING EVENT -->
+            <!-- START LIST OF EVENTS -->
             <div class="row">
                 <div class="col-auto">
-                    <p class="fw-bold fw-5 mt-lg-4">Upcomming Event</p>
+                    <p class="fw-bold fw-5 mt-lg-4">List of Event</p>
                     <form class="input-group">
                         <input type="text" class="form-control" placeholder="Search...">
                         <div class="input-group-append">
@@ -138,46 +175,8 @@
                     </table>
                 </div>
             </div>
-            <!-- END UPCOMMING EVENT -->
-<!-- START LIST OF EVENTS -->
-<div class="row">
-    <div class="col-auto">
-        <p class="fw-bold fw-5 mt-lg-4">List of Event</p>
-        <form class="input-group">
-            <input type="text" class="form-control" placeholder="Search...">
-            <div class="input-group-append">
-                <button class="btn" type="submit" name="search">
-                    <i class="fas fa-search"></i>
-                </button>
             </div>
-        </form>
-    </div>
-</div>
-<div class="row">
-    <div class="table-responsive">
-        <table class="table table-borderless text-center">
-            <thead>
-                <tr>
-                    <th scope="col">Event Name</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Time</th>
-                    <th scope="col">Venue</th>
-                    <th scope="col">Department</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td scope="col">sample</td>
-                    <td scope="col">sample</td>
-                    <td scope="col">sample</td>
-                    <td scope="col">sample</td>
-                    <td scope="col">sample</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-<!-- END LIST OF EVENTS -->
+            <!-- END LIST OF EVENTS -->
         </div>
     </div>
 

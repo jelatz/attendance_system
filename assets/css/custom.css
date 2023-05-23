@@ -28,24 +28,24 @@ html::-webkit-scrollbar{
 }
 .nav-link{
     width: 100% !important;
-    color: #5c5c5c;
+    color: white;
     padding: 3px 10px 3px 10px;
 }
 .nav-link:hover{
-    background-color: #FFD700 !important;
+    color: #FFD700 !important;
 }
 .welcome-message{
     display: none;
 }
 .dropdown-menu{
     border: none;
-        background-color: #C4C4C4;
 }
 .dropdown-item:hover{
-    background-color: #FFD700 !important;
+    color: #fec223 !important;
+    background-color: transparent !important;
 }
 .navbar{
-        background-color: #C4C4C4;
+        background-color: #27235e;
 }
 #content-wrapper{
     padding-top: 4rem;
@@ -65,9 +65,8 @@ html::-webkit-scrollbar{
     left: 12rem;
 }
 .active{
-    background-color: #FFD700 !important;
+    color: #fec223 !important;
     font-weight: 1000;
-    color: black !important;
 }
 .modal-content{
     background-color: #C4C4C4;
@@ -82,7 +81,7 @@ html::-webkit-scrollbar{
     }
     .navbar{
         width: 200px;
-        background-color: #C4C4C4;
+        background-color: #27235e;
         height: 100%;
         min-height: 100vh;
         justify-content: flex-start !important;
@@ -90,9 +89,11 @@ html::-webkit-scrollbar{
     }
     .welcome-message{
         margin: 1rem 0 1rem 0 !important;
+        color: white;
     }
     .nav-link:hover{
         width: 100% !important;
+        color: #fec223;
     }
     .navbar-nav{
         width: 100%;
@@ -112,15 +113,21 @@ html::-webkit-scrollbar{
         width: 100%;
         text-align: center;
         position: static !important;
-        background-color: #ededed;
+        background-color: #1f1f59;
         gap: 1rem;
         padding: 0 0 0 0;
+    }
+    .dropdown-item{
+        color: white;
     }
     #content-wrapper{
         padding-top: 0 !important;
     }
     #header{
-        background-color: rgb(4,4,101);
+        background-color: #26235e;
         height: 6rem;
+    }
+    .nav-link:focus{
+        color: white !important;
     }
 }

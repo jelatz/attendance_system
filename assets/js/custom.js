@@ -7,6 +7,7 @@ function login (){
     document.getElementById('login').style.display='flex';
   document.getElementById('forgot').style.display='none';
 }
+//DARK MODE
 function themeChange() {
   var body = document.body;
   var themeLink = document.querySelector(".nav-link[name='themeChange']");
