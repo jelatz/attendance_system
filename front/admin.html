@@ -60,7 +60,7 @@
     <div id="content-wrapper">
         <div class="container-fluid">
             <div class="row d-flex align-items-center" id="header">
-            <h1 style="color:#FFD700;" class="px-3 my-4"><strong>Accounts</strong></h1>
+                <h1 style="color:#FFD700;" class="px-3 my-4"><strong>Accounts</strong></h1>
             </div>
             <p class="fw-bold fw-5 mt-lg-3 px-lg-3">Admin</p>
             <!-- SEARCH AND ADD ADMIN BUTTON -->
@@ -76,8 +76,8 @@
                     </form>
                 </div>
                 <div class="col-auto text-end">
-                    <button class="btn btn-sm text-white" style="background-color: #27235e;" type="button" data-bs-toggle="modal"
-                        data-bs-target="#addAdmin">Add Admin</button>
+                    <button class="btn btn-sm text-white" style="background-color: #27235e;" type="button"
+                        data-bs-toggle="modal" data-bs-target="#addAdmin">Add Admin</button>
                 </div>
             </div>
             <!-- SEARCH AND ADD ADMIN BUTTON -->
@@ -105,8 +105,8 @@
                                 <input type="email" class="form-control" required>
                                 <div class="row justify-content-center">
                                     <div class="col-lg-4 text-center">
-                                    <button class="btn btn-small mt-3 w-100 text-white" type="submit"
-                                        style="background-color: #333333;">Create</button>
+                                        <button class="btn btn-small mt-3 w-100 text-white" type="submit"
+                                            style="background-color: #333333;">Create</button>
                                     </div>
                                 </div>
                             </form>
@@ -136,10 +136,11 @@
                                     <td>sample</td>
                                     <td>sample</td>
                                     <td class="d-flex gap-2 justify-content-center">
-                                        <button class="btn m-0 p-0" data-bs-toggle="modal" data-bs-target="#deptView">
+                                        <button class="btn m-0 p-0" data-bs-toggle="modal" data-bs-target="#adminView">
                                             <i class="fa fa-pen-to-square text-primary"></i>
                                         </button>
-                                        <button class="btn m-0 p-0" data-bs-toggle="modal" data-bs-target="#deptDelete">
+                                        <button class="btn m-0 p-0" data-bs-toggle="modal"
+                                            data-bs-target="#adminDelete">
                                             <i class="fa fa-trash text-danger"></i>
                                         </button>
                                     </td>
@@ -149,6 +150,57 @@
                     </div>
                 </div>
             </div>
+            <!-- MODAL FOR ADMIN VIEW -->
+            <div class="modal fade" id="adminView">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content p-4">
+                        <div class="modal-header border-0">
+                            <hi class="modal-title fs-5">Account Name</hi>
+                            <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="#" method="POST">
+                                <div class="row mb-3">
+                                    <label for="adminName" class="col-sm-4 col-form-label text-nowrap">Name: </label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="adminName" value="Admin Name">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="adminDepartment"
+                                        class="col-sm-4 col-form-label text-nowrap">Department:</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="adminDepartment"
+                                            value="Admin Department">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="adminEmail" class="col-sm-4 col-form-label text-nowrap">Email
+                                        Address:</label>
+                                    <div class="col-sm-8">
+                                        <input type="email" class="form-control" id="adminEmail" value="Admin@Email.com">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="adminNumber" class="col-sm-4 col-form-label text-nowrap">Contact
+                                        Number</label>
+                                    <div class="col-sm-8">
+                                        <input type="number" class="form-control" id="adminNumber"
+                                            value="091234324">
+                                    </div>
+                                </div>
+                                <div class="row mt-5 justify-content-center">
+                                    <div class="col-lg-5 text-center">
+                                        <input type="submit" class="btn btn-sm text-white w-100 rounded" value="Update"
+                                            name="adminUpdate" style="background-color: #333333;">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MODAL FOR ADMIN VIEW -->
             <!-- TABLE -->
         </div>
     </div>
