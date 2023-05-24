@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../assets/css/aos.css">
     <link rel="stylesheet" href="../assets/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <title>Admin Dashboard Page</title>
 </head>
 
@@ -61,6 +62,14 @@
         <div class="container-fluid">
             <div class="row d-flex align-items-center" id="header">
                 <h1 class="px-3 my-0" style="color:#fec223;"><strong>Dashboard</strong></h1>
+            </div>
+            <div class="row mt-4 justify-content-evenly">
+                <div class="col-lg-4 text-center">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <canvas id="myChart2"></canvas>
+                </div>
             </div>
             <div class="row px-lg-4">
                 <p class="fw-bold fw-5 mt-lg-4">Ongoing Event</p>
@@ -184,8 +193,85 @@
     <!-- SCRIPTS -->
     <script src="../assets/js/bootstrap.bundle.js"></script>
     <script src="../assets/js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../assets/js/aos.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script>
+        // Get the canvas element
+        var ctx = document.getElementById('myChart').getContext('2d');
+    
+        // Define the data for the bar graph
+        var data = {
+          labels: ['Red', 'Blue', 'Yellow'],
+          datasets: [{
+            label: 'For the school year 2023-2024 2nd Semester',
+            data: [12, 19, 3],
+            backgroundColor: [
+              'rgba(255, 99, 102, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 1
+          }]
+        };
+    
+        // Initialize the bar graph
+        var myChart = new Chart(ctx, {
+          type: 'bar',
+          data: data,
+          options: {
+            responsive: true,
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+       <script>
+        // Get the canvas element
+        var ctx = document.getElementById('myChart2').getContext('2d');
+    
+        // Define the data for the bar graph
+        var data = {
+          labels: ['Red', 'Blue', 'Yellow'],
+          datasets: [{
+            label: 'For the school year 2023-2024 2nd Semester',
+            data: [12, 19, 3],
+            backgroundColor: [
+              'rgba(255, 99, 102, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 1
+          }]
+        };
+    
+        // Initialize the bar graph
+        var myChart = new Chart(ctx, {
+          type: 'bar',
+          data: data,
+          options: {
+            responsive: true,
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
 </body>
 
 </html>

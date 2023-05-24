@@ -126,6 +126,7 @@
                                     <th scope="col">Department</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Contact Number</th>
+                                    <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -134,6 +135,14 @@
                                     <td>sample</td>
                                     <td>sample</td>
                                     <td>sample</td>
+                                    <td class="d-flex gap-2 justify-content-center">
+                                        <button class="btn m-0 p-0" data-bs-toggle="modal" data-bs-target="#deptView">
+                                            <i class="fa fa-pen-to-square text-primary"></i>
+                                        </button>
+                                        <button class="btn m-0 p-0" data-bs-toggle="modal" data-bs-target="#deptDelete">
+                                            <i class="fa fa-trash text-danger"></i>
+                                        </button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
