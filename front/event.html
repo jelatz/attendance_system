@@ -125,8 +125,8 @@
                         data-bs-toggle="modal" data-bs-target="#addOfficer">Add Event</button>
                 </div>
             </div>
-            <!-- SEARCH AND ADD ADMIN BUTTON -->
-            <!-- MODAL FOR ADD ADMIN -->
+            <!-- SEARCH AND ADD EVENT BUTTON -->
+            <!-- MODAL FOR ADD EVENT -->
             <div class="modal fade" tabindex="-1" id="addOfficer">
                 <div class="modal-dialog modal-dialog-centered" id="admin">
                     <div class="modal-content p-4">
@@ -146,6 +146,11 @@
                                 <input type="text" class="form-control" required>
                                 <label for="department" class="form-label mt-2">Department:</label>
                                 <input type="text" class="form-control" required>
+                                <select name="compulsory" id="compulsory" class="w-100 my-4 px-2" style="height: 2.3rem; border-radius: 15px;">
+                                    <option selected>Select if compulsory or not</option>
+                                    <option value="1">Yes</option>
+                                    <option value="2">No</option>
+                                </select>
                                 <div class="row justify-content-center">
                                     <div class="col-lg-4 text-center">
                                         <button class="btn btn-small mt-3 w-100 text-white" type="submit"
@@ -157,7 +162,7 @@
                     </div>
                 </div>
             </div>
-            <!-- MODAL FOR ADD ADMIN -->
+            <!-- MODAL FOR ADD EVENT -->
             <!-- TABLE -->
             <div class="row mt-4 text-center">
                 <div class="col">
