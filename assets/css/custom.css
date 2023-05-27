@@ -73,7 +73,18 @@ html::-webkit-scrollbar{
     background-color: #1f1f59;
     color: white;
 }
-
+.dropdown-menu{
+    width: 100%;
+    text-align: start;
+    position: static !important;
+    background-color: #1f1f59;
+    gap: 1rem;
+    padding: 0 0 0 0;
+    color: white !important;
+}
+.dropdown-item{
+    color: white;
+}
 @media screen and (min-width:992px) {
     #content-wrapper{
         padding-left: 200px;
