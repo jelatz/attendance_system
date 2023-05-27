@@ -60,24 +60,69 @@
     <div id="content-wrapper">
         <div class="container-fluid">
             <div class="row d-flex align-items-center" id="header">
-            <h1 class="px-3 my-4" style="color:#FFD700;"><strong>Events</strong></h1>
+                <h1 class="px-3 my-4" style="color:#FFD700;"><strong>Events</strong></h1>
             </div>
+            <!-- TABLE FOR ONGOING EVENTS -->
+            <p class="fw-bold fw-5 mt-lg-3 px-lg-3">
+                On-going Events
+            </p>
+            <div class="row justify-content-between px-lg-3">
+                <div class="col-auto">
+                    <form class="input-group">
+                        <input type="search" class="form-control" placeholder="Search...">
+                        <div class="input-group-append">
+                            <button class="btn" type="submit" name="searchUpcomming">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- TABLE -->
+            <div class="row mt-4 text-center">
+                <div class="col">
+                    <div class="table-responsive">
+                        <table class="table table-borderless">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Event Name</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">Venue</th>
+                                    <th scope="col">Department</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="#" class="nav-link text-dark">sample</a></td>
+                                    <td>sample</td>
+                                    <td>sample</td>
+                                    <td>sample</td>
+                                    <td>sample</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- TABLE -->
+            <!-- TABLE FOR ONGOING EVENTS -->
             <p class="fw-bold fw-5 mt-lg-3 px-lg-3">List of Events</p>
             <!-- SEARCH AND ADD ADMIN BUTTON -->
             <div class="row justify-content-between px-lg-3">
                 <div class="col-auto">
                     <form class="input-group">
-                        <input type="text" class="form-control" placeholder="Search...">
+                        <input type="search" class="form-control" placeholder="Search...">
                         <div class="input-group-append">
-                            <button class="btn" type="submit" name="search">
+                            <button class="btn" type="submit" name="searchList">
                                 <i class="fas fa-search"></i>
                             </button>
                         </div>
                     </form>
                 </div>
                 <div class="col-auto text-end">
-                    <button class="btn btn-sm text-white" style="background-color: #27235e;" type="button" data-bs-toggle="modal"
-                        data-bs-target="#addOfficer">Add Event</button>
+                    <button class="btn btn-sm text-white" style="background-color: #27235e;" type="button"
+                        data-bs-toggle="modal" data-bs-target="#addOfficer">Add Event</button>
                 </div>
             </div>
             <!-- SEARCH AND ADD ADMIN BUTTON -->
@@ -103,8 +148,8 @@
                                 <input type="text" class="form-control" required>
                                 <div class="row justify-content-center">
                                     <div class="col-lg-4 text-center">
-                                    <button class="btn btn-small mt-3 w-100 text-white" type="submit"
-                                        style="background-color: #333333;">Create</button>
+                                        <button class="btn btn-small mt-3 w-100 text-white" type="submit"
+                                            style="background-color: #333333;">Create</button>
                                     </div>
                                 </div>
                             </form>
