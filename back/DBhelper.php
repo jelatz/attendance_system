@@ -30,6 +30,7 @@ function disconnect(){
 function login ($user, $pass){
     global $conn;
     connect();
+    validate($user,$pass);
     $result = mysqli_query($conn, "SELECT * FROM accounts WHERE email = '$user' AND password = '$pass'");
     $row = mysqli_fetch_all($result);
     disconnect();
