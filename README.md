@@ -48,3 +48,8 @@ ENTITIES
 -eventdate
 -eventtime
 -eventvenue
+
+Progress
+-login (DONE)
+-logout (DONE)
+-Welcome Name of the user (DONE)

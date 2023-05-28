@@ -44,3 +44,18 @@ function login($email, $pass)
     disconnect();
     return $row;
 }
+// ADD EVENT
+function addEvent($eventName, $date, $time, $venue, $department, $compulsory)
+{
+    global $conn;
+    connect();
+    validate($eventName, $date, $time, $venue, $department, $compulsory);
+    $result = mysqli_query($conn, "INSERT INTO event_tbl (department_id,event_name,event_time,event_venue,compulsory,event_date) VALUES ('$department','$eventName','$time','$venue','$compulsory' , '$date')");
+    if (!$result) {
+        die('Error: ' . mysqli_error($conn)); // Handle the error appropriately
+    }
+
+    disconnect(); // Assuming this function disconnects from the database
+
+    return $result;
+}

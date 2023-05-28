@@ -8,6 +8,20 @@ if(isset($_POST['logout'])){
     disconnect();
     header("Location: ..\index.php");
 }
+if(isset($_POST['newEvent'])){
+    $eventName = $_POST['event'];
+    $date = $_POST['date'];
+    $time = $_POST['time'];
+    $venue = $_POST['venue'];
+    $compulsory = $_POST['compulsory'];
+    $department = $_POST['department'];
+
+    $add_event = addEvent($eventName, $date, $time, $venue, $department, $compulsory);
+
+    if($add_event){
+       echo '<script>alert("new event added!")</script>';
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -150,15 +164,15 @@ if(isset($_POST['logout'])){
                         <div class="modal-body">
                             <form action="#" method="POST">
                                 <label for="ename" class="form-label">Event Name:</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" class="form-control" name="event" required>
                                 <label for="date" class="form-label mt-2">Date: </label>
-                                <input type="date" class="form-control" required>
+                                <input type="date" class="form-control" name="date" required>
                                 <label for="time" class="form-label mt-2">Time:</label>
-                                <input type="time" class="form-control" required>
+                                <input type="time" class="form-control" name="time" required>
                                 <label for="venue" class="form-label">Venue:</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" class="form-control" name="venue" required>
                                 <label for="department" class="form-label mt-2">Department:</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" class="form-control" name="department" required>
                                 <select name="compulsory" id="compulsory" class="w-100 my-4 px-2" style="height: 2.3rem; border-radius: 15px;">
                                     <option selected>Select if compulsory or not</option>
                                     <option value="1">Yes</option>
@@ -166,7 +180,7 @@ if(isset($_POST['logout'])){
                                 </select>
                                 <div class="row justify-content-center">
                                     <div class="col-lg-4 text-center">
-                                        <button class="btn btn-small mt-3 w-100 text-white" type="submit"
+                                        <button class="btn btn-small mt-3 w-100 text-white" name="newEvent" type="submit"
                                             style="background-color: #333333;">Create</button>
                                     </div>
                                 </div>
