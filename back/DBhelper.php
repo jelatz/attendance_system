@@ -2,47 +2,45 @@
 $hostname = "localhost";
 $username = "root";
 $password = "";
-$db = "attendance";
+$db = "attendance_db";
 $conn;
 
 // CONNECTION TO DB
-function connect(){
+function connect()
+{
     global $hostname, $username, $password, $db, $conn;
     $conn = mysqli_connect($hostname, $username, $password, $db);
-// Check for connection errors
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+    // Check for connection errors
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
 }
 // VALIDATE THE INPUT DATA
-function validate($data){
+function validate($data)
+{
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
 }
 //CLOSE CONNECTION TO DB
-function disconnect(){
+function disconnect()
+{
     global $conn;
     mysqli_close($conn);
 }
 // LOGIN
-function login ($user, $pass){
+function login($email, $pass)
+{
     global $conn;
+    session_start();
     connect();
-    validate($user,$pass);
-    $result = mysqli_query($conn, "SELECT * FROM accounts WHERE email = '$user' AND password = '$pass'");
-    $row = mysqli_fetch_all($result);
+    validate($email, $pass);
+    $result = mysqli_query($conn, "SELECT * FROM user_tbl WHERE email = '$email' AND password = '$pass'");
+    $row = mysqli_fetch_assoc($result);
+    if ($row) {
+        $_SESSION['lastname'] = $row['lastname'];
+    }
     disconnect();
     return $row;
 }
-
-
-
-
-
-
-
-
-
-?>

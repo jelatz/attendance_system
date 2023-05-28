@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="../assets/css/aos.css">
     <link rel="stylesheet" href="../assets/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Admin Department Page</title>
+    <title>Admin Accounts Page</title>
 </head>
 
 <body>
     <!-- START NAVBAR -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark" data-bs-theme="dark">
         <div class="container-fluid flex-lg-column px-lg-0">
-            <a href="event.html" class="navbar-brand mb-lg-5 mt-lg-5">Logo</a>
+            <a href="event.php" class="navbar-brand mb-lg-5 mt-lg-5 text-white">Logo</a>
             <div class="welcome-message">
                 <h3>Welcome</h3>
                 <p class="text-center">Admin</p>
@@ -28,28 +28,28 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav me-lg-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="event.html" class="nav-link">Events</a>
+                        <a href="event.php" class="nav-link">Events</a>
                     </li>
                     <!-- <li class="nav-item">
-                        <a href="dashboard.html" class="nav-link">Dashboard</a>
+                        <a href="dashboard.php" class="nav-link">Dashboard</a>
                     </li> -->
                     <li class="nav-item dropdown">
-                        <a href="accounts.html" class="nav-link" data-bs-toggle="dropdown">Accounts <span
+                        <a href="accounts.php" class="nav-link" data-bs-toggle="dropdown">Accounts <span
                                 class="fa fa-caret-down"></span></a>
                         <div class="dropdown-menu" id="account">
-                            <a href="admin.html" class="dropdown-item">Admin</a>
-                            <a href="officer.html" class="dropdown-item ">Officer</a>
-                            <a href="student.html" class="dropdown-item">Student</a>
+                            <a href="admin.php" class="dropdown-item active">Admin</a>
+                            <a href="officer.php" class="dropdown-item">Officer</a>
+                            <a href="student.php" class="dropdown-item">Student</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="dept.html" class="nav-link active">Departments</a>
+                        <a href="dept.php" class="nav-link">Departments</a>
                     </li>
                     <li class="nav-item">
-                        <a href="reports.html" class="nav-link">Reports</a>
+                        <a href="reports.php" class="nav-link">Reports</a>
                     </li>
                     <li class="nav-item">
-                        <a href="logout.html" class="nav-link">Logout</a>
+                        <a href="logout.php" class="nav-link">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -60,9 +60,9 @@
     <div id="content-wrapper">
         <div class="container-fluid">
             <div class="row d-flex align-items-center" id="header">
-            <h1 style="color:#FFD700;" class="px-3 my-4"><strong>Departments</strong></h1>
+                <h1 style="color:#FFD700;" class="px-3 my-4"><strong>Accounts</strong></h1>
             </div>
-            <p class="fw-bold fw-5 mt-lg-3 px-lg-3">List of Departments</p>
+            <p class="fw-bold fw-5 mt-lg-3 px-lg-3">Admin</p>
             <!-- SEARCH AND ADD ADMIN BUTTON -->
             <div class="row justify-content-between px-lg-3">
                 <div class="col-auto">
@@ -70,36 +70,42 @@
                         <input type="text" class="form-control" placeholder="Search...">
                         <div class="input-group-append">
                             <button class="btn" type="submit" name="search">
-                                <i class="fas fa-search z-index-master"></i>
+                                <i class="fas fa-search"></i>
                             </button>
                         </div>
                     </form>
                 </div>
                 <div class="col-auto text-end">
-                    <button class="btn btn-sm text-white" style="background-color: #27235e;" type="button" data-bs-toggle="modal"
-                        data-bs-target="#addOfficer">Add Department</button>
+                    <button class="btn btn-sm text-white" style="background-color: #27235e;" type="button"
+                        data-bs-toggle="modal" data-bs-target="#addAdmin">Add Admin</button>
                 </div>
             </div>
             <!-- SEARCH AND ADD ADMIN BUTTON -->
             <!-- MODAL FOR ADD ADMIN -->
-            <div class="modal fade" tabindex="-1" id="addOfficer">
+            <div class="modal fade" tabindex="-1" id="addAdmin">
                 <div class="modal-dialog modal-dialog-centered" id="admin">
                     <div class="modal-content p-4">
                         <div class="modal-header border-0">
-                            <h1 class="modal-title fs-5">Add New Department</h1>
-                            <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+                            <h1 class="modal-title fs-5">Add New Admin</h1>
+                            <button class="btn-close fw-bolder" type="button" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
                             <form action="#" method="POST">
-                                <label for="dept" class="form-label">Department Name:</label>
+                                <label for="fname" class="form-label">First Name:</label>
                                 <input type="text" class="form-control" required>
-                                <label for="deptBldng" class="form-label mt-2">Department Building: </label>
+                                <label for="mname" class="form-label mt-2">Middle Name: </label>
                                 <input type="text" class="form-control" required>
-                                <label for="deptFloor" class="form-label mt-2">Department Floor:</label>
+                                <label for="lname" class="form-label mt-2">Last Name:</label>
                                 <input type="text" class="form-control" required>
+                                <label for="departments" class="form-label">Department:</label>
+                                <input type="text" class="form-control" required>
+                                <label for="contact" class="form-label mt-2">Contact Number:</label>
+                                <input type="number" class="form-control" required>
+                                <label for="email" class="form-label mt-2">Email Address:</label>
+                                <input type="email" class="form-control" required>
                                 <div class="row justify-content-center">
                                     <div class="col-lg-4 text-center">
-                                        <button class="btn btn-small mt-3 w-100 text-white" name="createDept" type="submit"
+                                        <button class="btn btn-small mt-3 w-100 text-white" type="submit"
                                             style="background-color: #333333;">Create</button>
                                     </div>
                                 </div>
@@ -116,9 +122,10 @@
                         <table class="table table-borderless">
                             <thead>
                                 <tr>
+                                    <th scope="col">Name</th>
                                     <th scope="col">Department</th>
-                                    <th scope="col">Building</th>
-                                    <th scope="col">Floor</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Contact Number</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
@@ -127,11 +134,13 @@
                                     <td>sample</td>
                                     <td>sample</td>
                                     <td>sample</td>
+                                    <td>sample</td>
                                     <td class="d-flex gap-2 justify-content-center">
-                                        <button class="btn m-0 p-0" data-bs-toggle="modal" data-bs-target="#deptView">
+                                        <button class="btn m-0 p-0" data-bs-toggle="modal" data-bs-target="#adminView">
                                             <i class="fa fa-pen-to-square text-primary"></i>
                                         </button>
-                                        <button class="btn m-0 p-0" data-bs-toggle="modal" data-bs-target="#deptDelete">
+                                        <button class="btn m-0 p-0" data-bs-toggle="modal"
+                                            data-bs-target="#adminDelete">
                                             <i class="fa fa-trash text-danger"></i>
                                         </button>
                                     </td>
@@ -141,38 +150,49 @@
                     </div>
                 </div>
             </div>
-            <!-- MODAL FOR EDIT DEPARTMENT DETAILS -->
-            <div class="modal fade" id="deptView">
+            <!-- MODAL FOR ADMIN VIEW -->
+            <div class="modal fade" id="adminView">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content p-4">
                         <div class="modal-header border-0">
-                            <h1 class="modal-title fs-5">Department Name</h1>
+                            <hi class="modal-title fs-5">Account Name</hi>
                             <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
                             <form action="#" method="POST">
                                 <div class="row mb-3">
-                                    <label for="deptName" class="col-sm-4 col-form-label text-nowrap">Department Name: </label>
+                                    <label for="adminName" class="col-sm-4 col-form-label text-nowrap">Name: </label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" id="deptName" value="CCS">
+                                        <input type="text" class="form-control" id="adminName" value="Admin Name">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="deptBldng" class="col-sm-4 col-form-label">Building: </label>
+                                    <label for="adminDepartment"
+                                        class="col-sm-4 col-form-label text-nowrap">Department:</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" id="deptBldng" value="Jueco">
+                                        <input type="text" class="form-control" id="adminDepartment"
+                                            value="Admin Department">
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label for="deptFloor" class="col-sm-4 col-form-label">Floor: </label>
+                                    <label for="adminEmail" class="col-sm-4 col-form-label text-nowrap">Email
+                                        Address:</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" id="deptFloor" value="5">
+                                        <input type="email" class="form-control" id="adminEmail"
+                                            value="Admin@Email.com">
                                     </div>
                                 </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-4 text-center">
-                                        <button class="btn btn-small mt-3 w-100 text-white" name="updateDept" type="submit"
-                                            style="background-color: #333333;">Update</button>
+                                <div class="row mb-3">
+                                    <label for="adminNumber" class="col-sm-4 col-form-label text-nowrap">Contact
+                                        Number</label>
+                                    <div class="col-sm-8">
+                                        <input type="number" class="form-control" id="adminNumber" value="091234324">
+                                    </div>
+                                </div>
+                                <div class="row mt-5 justify-content-center">
+                                    <div class="col-lg-5 text-center">
+                                        <input type="submit" class="btn btn-sm text-white w-100 rounded" value="Update"
+                                            name="adminUpdate" style="background-color: #333333;">
                                     </div>
                                 </div>
                             </form>
@@ -180,30 +200,32 @@
                     </div>
                 </div>
             </div>
-            <!-- MODAL FOR EDIT DEPARTMENT DETAILS -->
-            <!-- MODAL FOR DELETE DEPARTMENT -->
-            <div class="modal fade" id="deptDelete">
-                <div class="modal-dialog modal-dialog-centered border-0">
+            <!-- MODAL FOR ADMIN VIEW -->
+            <!-- MODAL FOR ADMIN DELETE ACCOUNT -->
+            <div class="modal fade" id="adminDelete">
+                <div class="modal-dialog modal-dialog-centered modal-md">
                     <div class="modal-content p-4">
                         <div class="modal-header border-0">
-                            <h1 class="modal-title fs-5">Delete Department</h1>
+                            <h1 class="modal-title fs-5">Delete Account</h1>
                             <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
-                            <p>Are you sure you want to delete this department?</p>
+                            <p>Are you sure you want to delete this account?</p>
                             <div class="row justify-content-center">
-                                <div class="col-lg-4 text-center">
-                                    <button class="btn btn-small mt-3 w-100 text-white" name="deleteDept" type="submit"
-                                        style="background-color: #333333;">Delete</button>
+                                <div class="col-lg-4">
+                                    <button class="btn btn-sm text-white w-100" type="submit" name="adminDelete" style="background-color: #333333;">Yes</button>
+                                </div>
+                                <div class="col-lg-4">
+                                    <button class="btn btn-sm text-white w-100" type="button" data-bs-dismiss="modal" style="background-color: #333333;">No</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- MODAL FOR DELETE DEPARTMENT -->
-            <!-- TABLE -->
-        </div>
+        <!-- MODAL FOR ADMIN DELETE ACCOUNT -->
+        <!-- TABLE -->
+    </div>
     </div>
 
     <!-- END CONTENT -->

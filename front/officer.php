@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="../assets/css/aos.css">
     <link rel="stylesheet" href="../assets/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Admin Accounts Page</title>
+    <title>Admin Officer Page</title>
 </head>
 
 <body>
     <!-- START NAVBAR -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark" data-bs-theme="dark">
         <div class="container-fluid flex-lg-column px-lg-0">
-            <a href="event.html" class="navbar-brand mb-lg-5 mt-lg-5 text-white">Logo</a>
+            <a href="event.php" class="navbar-brand mb-lg-5 mt-lg-5">Logo</a>
             <div class="welcome-message">
                 <h3>Welcome</h3>
                 <p class="text-center">Admin</p>
@@ -28,28 +28,28 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav me-lg-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="event.html" class="nav-link">Events</a>
+                        <a href="event.php" class="nav-link">Events</a>
                     </li>
                     <!-- <li class="nav-item">
-                        <a href="dashboard.html" class="nav-link">Dashboard</a>
+                        <a href="dashboard.php" class="nav-link">Dashboard</a>
                     </li> -->
                     <li class="nav-item dropdown">
-                        <a href="accounts.html" class="nav-link" data-bs-toggle="dropdown">Accounts <span
+                        <a href="accounts.php" class="nav-link" data-bs-toggle="dropdown">Accounts <span
                                 class="fa fa-caret-down"></span></a>
                         <div class="dropdown-menu" id="account">
-                            <a href="admin.html" class="dropdown-item active">Admin</a>
-                            <a href="officer.html" class="dropdown-item">Officer</a>
-                            <a href="student.html" class="dropdown-item">Student</a>
+                            <a href="admin.php" class="dropdown-item">Admin</a>
+                            <a href="officer.php" class="dropdown-item active">Officer</a>
+                            <a href="student.php" class="dropdown-item">Student</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="dept.html" class="nav-link">Departments</a>
+                        <a href="dept.php" class="nav-link">Departments</a>
                     </li>
                     <li class="nav-item">
-                        <a href="reports.html" class="nav-link">Reports</a>
+                        <a href="reports.php" class="nav-link">Reports</a>
                     </li>
                     <li class="nav-item">
-                        <a href="logout.html" class="nav-link">Logout</a>
+                        <a href="logout.php" class="nav-link">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -60,9 +60,9 @@
     <div id="content-wrapper">
         <div class="container-fluid">
             <div class="row d-flex align-items-center" id="header">
-                <h1 style="color:#FFD700;" class="px-3 my-4"><strong>Accounts</strong></h1>
+            <h1 style="color:#FDD700;" class="px-3 my-4"><strong>Accounts</strong></h1>
             </div>
-            <p class="fw-bold fw-5 mt-lg-3 px-lg-3">Admin</p>
+            <p class="fw-bold fw-5 mt-lg-3 px-lg-3">Officer</p>
             <!-- SEARCH AND ADD ADMIN BUTTON -->
             <div class="row justify-content-between px-lg-3">
                 <div class="col-auto">
@@ -76,18 +76,18 @@
                     </form>
                 </div>
                 <div class="col-auto text-end">
-                    <button class="btn btn-sm text-white" style="background-color: #27235e;" type="button"
-                        data-bs-toggle="modal" data-bs-target="#addAdmin">Add Admin</button>
+                    <button class="btn btn-sm text-white" style="background-color: #27235e;" type="button" data-bs-toggle="modal"
+                        data-bs-target="#addOfficer">Add Officer</button>
                 </div>
             </div>
             <!-- SEARCH AND ADD ADMIN BUTTON -->
             <!-- MODAL FOR ADD ADMIN -->
-            <div class="modal fade" tabindex="-1" id="addAdmin">
+            <div class="modal fade" tabindex="-1" id="addOfficer">
                 <div class="modal-dialog modal-dialog-centered" id="admin">
                     <div class="modal-content p-4">
                         <div class="modal-header border-0">
-                            <h1 class="modal-title fs-5">Add New Admin</h1>
-                            <button class="btn-close fw-bolder" type="button" data-bs-dismiss="modal"></button>
+                            <h1 class="modal-title fs-5">Add New Officer</h1>
+                            <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
                             <form action="#" method="POST">
@@ -105,8 +105,8 @@
                                 <input type="email" class="form-control" required>
                                 <div class="row justify-content-center">
                                     <div class="col-lg-4 text-center">
-                                        <button class="btn btn-small mt-3 w-100 text-white" type="submit"
-                                            style="background-color: #333333;">Create</button>
+                                    <button class="btn btn-small mt-4 w-100 text-white" type="submit"
+                                        style="background-color: #333333;">Create</button>
                                     </div>
                                 </div>
                             </form>
@@ -150,8 +150,8 @@
                     </div>
                 </div>
             </div>
-            <!-- MODAL FOR ADMIN VIEW -->
-            <div class="modal fade" id="adminView">
+             <!-- MODAL FOR ADMIN VIEW -->
+             <div class="modal fade" id="adminView">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content p-4">
                         <div class="modal-header border-0">
@@ -224,8 +224,8 @@
                 </div>
             </div>
         <!-- MODAL FOR ADMIN DELETE ACCOUNT -->
-        <!-- TABLE -->
-    </div>
+            <!-- TABLE -->
+        </div>
     </div>
 
     <!-- END CONTENT -->

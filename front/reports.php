@@ -17,7 +17,7 @@
     <!-- START NAVBAR -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark" data-bs-theme="dark">
         <div class="container-fluid flex-lg-column px-lg-0">
-            <a href="event.html" class="navbar-brand mb-lg-5 mt-lg-5">Logo</a>
+            <a href="event.php" class="navbar-brand mb-lg-5 mt-lg-5">Logo</a>
             <div class="welcome-message">
                 <h3>Welcome</h3>
                 <p class="text-center">Admin</p>
@@ -28,28 +28,28 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav me-lg-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="event.html" class="nav-link">Events</a>
+                        <a href="event.php" class="nav-link">Events</a>
                     </li>
                     <!-- <li class="nav-item">
-                        <a href="dashboard.html" class="nav-link">Dashboard</a>
+                        <a href="dashboard.php" class="nav-link">Dashboard</a>
                     </li> -->
                     <li class="nav-item dropdown">
-                        <a href="accounts.html" class="nav-link" data-bs-toggle="dropdown">Accounts <span
+                        <a href="accounts.php" class="nav-link" data-bs-toggle="dropdown">Accounts <span
                                 class="fa fa-caret-down"></span></a>
                         <div class="dropdown-menu" id="account">
-                            <a href="admin.html" class="dropdown-item">Admin</a>
-                            <a href="officer.html" class="dropdown-item ">Officer</a>
-                            <a href="student.html" class="dropdown-item">Student</a>
+                            <a href="admin.php" class="dropdown-item">Admin</a>
+                            <a href="officer.php" class="dropdown-item ">Officer</a>
+                            <a href="student.php" class="dropdown-item">Student</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="dept.html" class="nav-link">Departments</a>
+                        <a href="dept.php" class="nav-link">Departments</a>
                     </li>
                     <li class="nav-item">
-                        <a href="reports.html" class="nav-link active">Reports</a>
+                        <a href="reports.php" class="nav-link active">Reports</a>
                     </li>
                     <li class="nav-item">
-                        <a href="logout.html" class="nav-link">Logout</a>
+                        <a href="logout.php" class="nav-link">Logout</a>
                     </li>
                 </ul>
             </div>

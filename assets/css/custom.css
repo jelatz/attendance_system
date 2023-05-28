@@ -21,7 +21,11 @@ html::-webkit-scrollbar{
 }
 .login-btn{
     background-color: #202020;
-    width: 12rem;
+    width: 15rem !important;
+    height: 2rem !important;
+}
+.login-btn:hover{
+    background-color: #565657 !important;
 }
 .forgotPass:hover{
     color: red !important;
