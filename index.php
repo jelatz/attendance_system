@@ -1,18 +1,20 @@
 <?php
-session_start();
+// session_start();
 include_once "back\DBhelper.php";
 
 if(isset($_POST['login'])){
 
     $email = $_POST['email'];
     $pass = $_POST['password'];
-    // echo "<script>window.alert(".$_SESSION['lastname'].")</script>";
     $login = login($email,$pass);
-
-    if(sizeof($login) > 0){
+    if($login){
         header("Location: front/event.php");
-    }else{
-        header("Location:index.php?error='Incorrect Password'");
+    }elseif($login == null){
+        header("Location:index.php?notRegistered= Email not Registered");
+    }
+    else{
+        header("Location:index.php?error= Incorrect Password");
+        exit();
     }
 
 if(isset($_GET['error'])){
@@ -46,6 +48,13 @@ if(isset($_GET['error'])){
                     <div class="form-floating mb-3">
                         <input type="username" class="form-control h-25" name="email" id="floatingInput" placeholder="Username">
                         <label for="floatingInput">Email</label>
+                        <div class="row justify-content-start text-start">
+                        <?php
+                        if(isset($_GET['notRegistered'])){
+                            ?> <small class="text-danger"><?php echo $_GET['notRegistered'] ?></small><?php
+                        }
+                    ?>
+                    </div>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="password" class="form-control h-25" name="password" id="floatingPass" placeholder="Password">

@@ -95,6 +95,7 @@
                                         <th scope="col">Date</th>
                                         <th scope="col">Time</th>
                                         <th scope="col">Venue</th>
+                                        <th scope="col">Department</th>
                                         <th scope="col">Total Attendance</th>
                                     </tr>
                                 </thead>
@@ -106,6 +107,7 @@
                                         <td scope="col">
                                             <a href="#" class="">sample</a>
                                         </td>
+                                        <td scope="col">sample</td>
                                         <td scope="col">sample</td>
                                         <td scope="col">sample</td>
                                         <td scope="col">sample</td>

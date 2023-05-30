@@ -2,7 +2,7 @@
 $hostname = "localhost";
 $username = "root";
 $password = "";
-$db = "attendance_db";
+$db = "attendance";
 $conn;
 
 // CONNECTION TO DB
@@ -36,7 +36,7 @@ function login($email, $pass)
     session_start();
     connect();
     validate($email, $pass);
-    $result = mysqli_query($conn, "SELECT * FROM user_tbl WHERE email = '$email' AND password = '$pass'");
+    $result = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email' AND password = '$pass'");
     $row = mysqli_fetch_assoc($result);
     if ($row) {
         $_SESSION['name'] = [$row['lastname'],$row['firstname']];
@@ -50,7 +50,7 @@ function addEvent($eventName, $date, $time, $venue, $department, $compulsory)
     global $conn;
     connect();
     validate($eventName, $date, $time, $venue, $department, $compulsory);
-    $result = mysqli_query($conn, "INSERT INTO event_tbl (department_id,event_name,event_time,event_venue,compulsory,event_date) VALUES ('$department','$eventName','$time','$venue','$compulsory' , '$date')");
+    $result = mysqli_query($conn, "INSERT INTO event (department_id,event_name,event_time,event_venue,compulsory,event_date) VALUES ('$department','$eventName','$time','$venue','$compulsory' , '$date')");
     if (!$result) {
         die('Error: ' . mysqli_error($conn)); // Handle the error appropriately
     }
