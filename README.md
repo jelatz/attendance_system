@@ -53,3 +53,18 @@ Progress
 -login (DONE)
 -logout (DONE)
 -Welcome Name of the user (DONE)
+-search function
+-add event
+-table for on-going events
+-table for list of events
+-add admin account
+-table for admin accounts
+-add officer account
+-table for officer account
+-add student account
+-table for student account
+-add department
+-department table
+-report table
+-download selected report
+-selected event view on reports

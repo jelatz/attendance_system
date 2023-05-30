@@ -2,11 +2,12 @@
 session_start();
 include_once "..\back\DBhelper.php";
 
-$lastname = $_SESSION['lastname'];
+$lastname = $_SESSION['name'];
 
 if(isset($_POST['logout'])){
     disconnect();
     header("Location: ..\index.php");
+    exit();
 }
 if(isset($_POST['newEvent'])){
     $eventName = $_POST['event'];
@@ -45,8 +46,16 @@ if(isset($_POST['newEvent'])){
         <div class="container-fluid flex-lg-column px-lg-0">
             <a href="event.php" class="navbar-brand mb-lg-5 mt-lg-5">Logo</a>
             <div class="welcome-message">
-                <h3>Welcome</h3>
-                <p class="text-center">Mr. <?php echo  $lastname; ?></p>
+                <h3 class="text-center">Welcome</h3>
+                <p class="text-center">Mr. 
+                <?php 
+                if (isset($_SESSION['name'])) {
+                    foreach ($_SESSION['name'] as $value) {
+                      echo $value . " ";
+                    }
+                  }
+                  ?>
+            </p>
             </div>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                 <span class="navbar-toggler-icon"></span>
@@ -89,51 +98,6 @@ if(isset($_POST['newEvent'])){
             <div class="row d-flex align-items-center" id="header">
                 <h1 class="px-3 my-4" style="color:#FFD700;"><strong>Events</strong></h1>
             </div>
-            <!-- TABLE FOR ONGOING EVENTS -->
-            <p class="fw-bold fw-5 mt-lg-3 px-lg-3">
-                On-going Events
-            </p>
-            <div class="row justify-content-between px-lg-3">
-                <div class="col-auto">
-                    <form class="input-group">
-                        <input type="search" class="form-control" placeholder="Search...">
-                        <div class="input-group-append">
-                            <button class="btn" type="submit" name="searchUpcomming">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!-- TABLE -->
-            <div class="row mt-4 text-center">
-                <div class="col">
-                    <div class="table-responsive">
-                        <table class="table table-borderless">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Event Name</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Time</th>
-                                    <th scope="col">Venue</th>
-                                    <th scope="col">Department</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><a href="attendance.php" class="nav-link text-dark">sample</a></td>
-                                    <td>sample</td>
-                                    <td>sample</td>
-                                    <td>sample</td>
-                                    <td>sample</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <!-- TABLE -->
-            <!-- TABLE FOR ONGOING EVENTS -->
             <p class="fw-bold fw-5 mt-lg-3 px-lg-3">List of Events</p>
             <!-- SEARCH AND ADD ADMIN BUTTON -->
             <div class="row justify-content-between px-lg-3">
@@ -202,6 +166,7 @@ if(isset($_POST['newEvent'])){
                                     <th scope="col">Time</th>
                                     <th scope="col">Venue</th>
                                     <th scope="col">Department</th>
+                                    <th scope="col">Status</th>
                                 </tr>
                             </thead>
                             <tbody>

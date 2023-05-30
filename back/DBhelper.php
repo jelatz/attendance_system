@@ -39,7 +39,7 @@ function login($email, $pass)
     $result = mysqli_query($conn, "SELECT * FROM user_tbl WHERE email = '$email' AND password = '$pass'");
     $row = mysqli_fetch_assoc($result);
     if ($row) {
-        $_SESSION['lastname'] = $row['lastname'];
+        $_SESSION['name'] = [$row['lastname'],$row['firstname']];
     }
     disconnect();
     return $row;
