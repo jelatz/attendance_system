@@ -1,26 +1,25 @@
 <?php
 // session_start();
-include_once "back\DBhelper.php";
-
-if(isset($_POST['login'])){
-
+include "back\DBhelper.php";
+// LOGIN 
+if (isset($_POST['login'])) {
     $email = $_POST['email'];
     $pass = $_POST['password'];
-    $login = login($email,$pass);
-    if($login){
-        header("Location: front/event.php");
-    }elseif($login == null){
-        header("Location:index.php?notRegistered= Email not Registered");
-    }
-    else{
-        header("Location:index.php?error= Incorrect Password");
+    $login = login($email, $pass);
+    $_SESSION['name'] = [$row['lastname'], $row['firstname']];
+    
+    if(!$login){
+        header("Location: index.php?notRegistered=Account Not Found!");
         exit();
     }
-
-if(isset($_GET['error'])){
-    echo "<script>window.alert('Incorrect Password')</script>";
+    if($pass !== $login['password']){
+        header("Location: index.php?error=Incorrect Password!");
+        exit();
+    }
+    header("Location: front/event.php");
+    exit();
 }
-}
+// LOGIN 
 ?>
 
 
@@ -46,7 +45,7 @@ if(isset($_GET['error'])){
                         <h3><strong>Login</strong></h3>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="username" class="form-control h-25" name="email" id="floatingInput" placeholder="Username">
+                        <input type="username" class="form-control h-25" name="email" id="floatingInput" placeholder="Email Address">
                         <label for="floatingInput">Email</label>
                         <div class="row justify-content-start text-start">
                         <?php
@@ -59,6 +58,13 @@ if(isset($_GET['error'])){
                     <div class="form-floating mb-3">
                         <input type="password" class="form-control h-25" name="password" id="floatingPass" placeholder="Password">
                         <label for="floatingPass">Password</label>
+                        <div class="row justify-content-start text-start">
+                        <?php
+                        if(isset($_GET['error'])){
+                            ?> <small class="text-danger"><?php echo $_GET['error'] ?></small><?php
+                        }
+                    ?>
+                    </div>
                     </div>
                     <!-- <div class="mb-1 text-start d-flex align-items-center">
                         <input type="checkbox" class="checkbox" name="remember"><span class="ms-2">Remember Password</span>

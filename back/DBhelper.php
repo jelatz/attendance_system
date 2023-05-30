@@ -14,6 +14,9 @@ function connect()
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
+
+    $username = mysqli_real_escape_string($conn, $username);
+    $password = mysqli_real_escape_string($conn, $password);
 }
 // VALIDATE THE INPUT DATA
 function validate($data)
@@ -36,11 +39,8 @@ function login($email, $pass)
     session_start();
     connect();
     validate($email, $pass);
-    $result = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email' AND password = '$pass'");
-    $row = mysqli_fetch_assoc($result);
-    if ($row) {
-        $_SESSION['name'] = [$row['lastname'],$row['firstname']];
-    }
+    $result = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email' LIMIT 1");
+    $row = mysqli_fetch_assoc($result);    
     disconnect();
     return $row;
 }

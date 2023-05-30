@@ -2,7 +2,7 @@
 session_start();
 include_once "..\back\DBhelper.php";
 
-$lastname = $_SESSION['name'];
+// $lastname = $_SESSION['name'];
 
 if(isset($_POST['logout'])){
     disconnect();
