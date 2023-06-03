@@ -1,6 +1,7 @@
 <?php
 // session_start();
-include "back\DBhelper.php";
+// include "back\DBhelper.php";
+include "config.php";
 // LOGIN 
 if (isset($_POST['login'])) {
     $email = $_POST['email'];
